@@ -6,9 +6,15 @@ nightmare.goto('https://www.baidu.com')
     .click('form[action*="/s"] [type=submit]')
     .wait('#content_left')
     .evaluate(function () {
-        return Array.prototype.map.call(
-            document.querySelectorAll('#content_left .c-container'),
-            function (item) {
+        // return Array.prototype.map.call(
+        //     document.querySelectorAll('#content_left .c-container'),
+        //     function (item,index) {
+        //         return item.querySelector('.t').innerText;
+        //     });
+
+        return Array.from(
+            document.querySelectorAll('#content_left .c-container'))
+            .map(function (item) {
                 return item.querySelector('.t').innerText;
             });
     })
