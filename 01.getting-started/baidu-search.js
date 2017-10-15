@@ -6,8 +6,11 @@ nightmare.goto('https://www.baidu.com')
     .click('form[action*="/s"] [type=submit]')
     .wait('#content_left')
     .evaluate(function () {
-        return document.querySelectorAll(
-            '#content_left .c-container').length;
+        return Array.prototype.map.call(
+            document.querySelectorAll('#content_left .c-container'),
+            function (item) {
+                return item.querySelector('.t').innerText;
+            });
     })
     .end()
     .then(function (result) {
