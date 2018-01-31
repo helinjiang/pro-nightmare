@@ -1,0 +1,22 @@
+{
+  "name": "pro-nightmare",
+  "version": "1.0.0",
+  "description": "Some demo of nightmare.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helinjiang/pro-nightmare.git"
+  },
+  "author": "helinjiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helinjiang/pro-nightmare/issues"
+  },
+  "homepage": "https://github.com/helinjiang/pro-nightmare#readme",
+  "dependencies": {
+    "nightmare": "^2.10.0"
+  }
+}

@@ -1,2 +1,2 @@
 # pro-nightmare
-Some demo of  nightmare.js
+Some demo of nightmare.js
