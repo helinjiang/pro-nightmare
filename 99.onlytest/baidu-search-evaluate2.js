@@ -1,16 +1,15 @@
 var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true });
 
-var nightmareResult = nightmare.goto('https://www.baidu.com');
-
-nightmareResult
+nightmare
+    .goto('https://www.baidu.com')
     .evaluate(function () {
         return document.title;
     })
     .then(function (result) {
         console.log('--1--', result);
 
-        nightmareResult
+        nightmare
             .type('form[action*="/s"] [name=f]', 'nightmare')
             .click('form[action*="/s"] [type=submit]')
             .wait('#content_left')
